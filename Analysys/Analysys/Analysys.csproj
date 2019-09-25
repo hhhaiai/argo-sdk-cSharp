@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F483E4B3-EEEB-449F-884C-A330F4810A85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Analysys</RootNamespace>
+    <AssemblyName>Analysys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysysDotNetSdk.cs" />
+    <Compile Include="AnalysysEncoder.cs" />
+    <Compile Include="BatchCollecter.cs" />
+    <Compile Include="DebugCollecter.cs" />
+    <Compile Include="ICollecter.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="Enum\DEBUG.cs" />
+    <Compile Include="Enum\EventName.cs" />
+    <Compile Include="Enum\PlatForm.cs" />
+    <Compile Include="Jayrock\Json\BooleanObject.cs" />
+    <Compile Include="Jayrock\Json\Collections\KeyedCollection.cs" />
+    <Compile Include="Jayrock\Json\Compat.cs" />
+    <Compile Include="Jayrock\Json\Configuration\DictionarySectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Configuration\ListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Configuration\TypeListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Diagnostics\DebugString.cs" />
+    <Compile Include="Jayrock\Json\IndentedTextWriter.cs" />
+    <Compile Include="Jayrock\Json\InternetDate.cs" />
+    <Compile Include="Jayrock\Json\Json\BufferedCharReader.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\AnyType.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\AnyImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ArrayImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\BooleanExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\BooleanImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ByteArrayExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ByteArrayImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ComponentExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ComponentImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataRowExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataRowViewExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataSetExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataTableExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataViewExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DateTimeExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DateTimeImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DictionaryExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DictionaryImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\EnumerableExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\EnumImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ExportAwareExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ExporterBase.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\GuidImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ImportAwareImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ImporterBase.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ListImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NameValueCollectionExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NameValueCollectionImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NumberExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NumberImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\StringExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\StringImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\CustomTypeDescriptor.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ExportContext.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ExporterCollection.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ExporterListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IJsonExportable.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IJsonImportable.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ImportContext.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ImporterCollection.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ImporterListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\JsonConvert.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\JsonIgnoreAttribute.cs" />
+    <Compile Include="Jayrock\Json\Json\EmptyJsonWriter.cs" />
+    <Compile Include="Jayrock\Json\Json\InvalidMemberException.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonArray.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonBoolean.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonException.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonNull.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonNumber.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonObject.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonReader.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonReaderBase.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonRecorder.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonString.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonTextReader.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonTextWriter.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonToken.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonTokenClass.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonWriter.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonWriterBase.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonWriterBracket.cs" />
+    <Compile Include="Jayrock\Json\UnixTime.cs" />
+    <Compile Include="Jayrock\Mask.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="MessageSender.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncCollecter.cs" />
+    <Compile Include="ValidHandle.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
